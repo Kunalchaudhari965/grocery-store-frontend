@@ -13,7 +13,7 @@ const page = () => {
       id: 2,
       name: 'Bananas',
       price: 60,
-      image: "https://th.bing.com/th/id/OSK.HEROlQwq-MqJurmEPVYmkdCbw0m3cgZM0brBFvz8RHzaL00?w=312&h=200&c=7&rs=1&o=6&dpr=1.3&pid=SANGAM",
+      image: "https://media.istockphoto.com/id/172876004/photo/banana-wallpaper.webp?a=1&b=1&s=612x612&w=0&k=20&c=gQaw0NMyA3RerOBV-okLq-wxqnI5YQLgvqSty0oeetY=",
     },
     {
       id: 3,

@@ -26,7 +26,7 @@ const ProductDetails = () => {
     id: 101,
     name: "Organic Bananas",
     price: 1.49,
-    image: "/images/banana.jpg",
+    image: "https://media.istockphoto.com/id/172876004/photo/banana-wallpaper.webp?a=1&b=1&s=612x612&w=0&k=20&c=gQaw0NMyA3RerOBV-okLq-wxqnI5YQLgvqSty0oeetY=",
     rating: 4.5,
     description:
       "Fresh organic bananas straight from the farm. Perfect for smoothies, baking, and healthy snacking.",
@@ -153,7 +153,7 @@ const ProductDetails = () => {
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-full h-40 object-cover rounded"
+                className="w-full h-40 object-cover rounded "
               />
               <h3 className="mt-2 font-semibold text-lg">{item.name}</h3>
               <p className="text-green-600 font-medium mt-1">
