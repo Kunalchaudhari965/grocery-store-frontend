@@ -13,13 +13,13 @@ const page = () => {
       id: 2,
       name: 'Bananas',
       price: 60,
-      image: 'https://www.jiomart.com/images/product/original/590008622/banana-mrl-pack-5-pcs-approx-600-g-700-g-product-images-o590008622-p590804206-0-202411141931.jpg?im=Resize=(360,360)',
+      image: "https://th.bing.com/th/id/OSK.HEROlQwq-MqJurmEPVYmkdCbw0m3cgZM0brBFvz8RHzaL00?w=312&h=200&c=7&rs=1&o=6&dpr=1.3&pid=SANGAM",
     },
     {
       id: 3,
       name: 'Milk (1L)',
       price: 50,
-      image: 'https://www.jiomart.com/images/product/original/590000538/amul-taaza-toned-milky-milk-500-ml-product-images-o590000538-p590049234-0-202410031824.jpg?im=Resize=(360,360)',
+      image: 'https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/94c99c0b-0cb1-4c07-b91d-586c5300945b.jpg?ts=1736856488',
     },
     {
       id: 4,
