@@ -53,66 +53,76 @@ const ProductGallery = () => {
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-        {products.map((product) => (
-          <div
-            key={product.id}
-            className="bg-white rounded-lg shadow hover:shadow-lg transition duration-300 relative"
-          >
-            {/* Wishlist Button */}
-            <button
-              onClick={() => toggleWishlist(product.id)}
-              className="absolute top-2 right-2 z-10 text-red-500 text-xl hover:scale-110 transition"
-            >
-              {wishlist.includes(product.id) ? <FaHeart /> : <FaRegHeart />}
-            </button>
+      {products.map((product) => (
+  <div
+    key={product.id}
+    className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden relative"
+  >
+    {/* Wishlist Button - Top Right */}
+    <button
+      onClick={() => toggleWishlist(product.id)}
+      className="absolute top-3 right-3 z-10 text-red-500 text-xl hover:scale-110 transition"
+      title="Add to Wishlist"
+    >
+      {wishlist.includes(product.id) ? <FaHeart /> : <FaRegHeart />}
+    </button>
 
-            {/* Image */}
-            <div className="relative w-full h-48 overflow-hidden rounded-t-lg">
-              {product.image.startsWith("http") ? (
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  fill
-                  className="object-cover"
-                />
-              )}
-            </div>
+    {/* Product Image */}
+    <div className="relative w-full h-48 overflow-hidden group rounded-t-2xl">
+      {product.image.startsWith("http") ? (
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"
+        />
+      ) : (
+        <Image
+          src={product.image}
+          alt={product.name}
+          fill
+          className="object-cover group-hover:scale-105 transition duration-300"
+        />
+      )}
+    </div>
 
-            {/* Content */}
-            <div className="p-4">
-              <h3 className="text-lg font-semibold text-gray-800">
-                {product.name}
-              </h3>
-              <p className="text-green-600 font-bold mt-1">
-                ${product.price.toFixed(2)}
-              </p>
+    {/* Content */}
+    <div className="p-4">
+      <h3 className="text-lg font-semibold text-gray-800 line-clamp-1">
+        {product.name}
+      </h3>
+      <p className="text-green-600 font-bold mt-1">
+        ${product.price.toFixed(2)}
+      </p>
 
-              {/* Rating */}
-              <div className="flex items-center mt-1 text-yellow-400">
-                {Array.from({ length: 5 }, (_, i) => (
-                  <FaStar
-                    key={i}
-                    className={i < Math.floor(product.rating) ? "text-yellow-400" : "text-gray-300"}
-                  />
-                ))}
-                <span className="ml-2 text-sm text-gray-600">
-                  {product.rating.toFixed(1)}
-                </span>
-              </div>
-
-              {/* Add to Cart */}
-              <button className="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">
-                Add to Cart
-              </button>
-            </div>
-          </div>
+      {/* Rating */}
+      <div className="flex items-center mt-2 text-yellow-400">
+        {Array.from({ length: 5 }, (_, i) => (
+          <FaStar
+            key={i}
+            className={
+              i < Math.floor(product.rating) ? "text-yellow-400" : "text-gray-300"
+            }
+          />
         ))}
+        <span className="ml-2 text-sm text-gray-600">
+          {product.rating.toFixed(1)}
+        </span>
+      </div>
+
+      {/* Buttons on a single row */}
+      <div className="mt-4 flex space-x-2">
+        <button className="w-1/2 bg-white border border-blue-600 text-blue-600 font-semibold py-2 rounded-lg hover:bg-blue-50 transition">
+          View Details
+        </button>
+        <button className="w-1/2 bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+))}
+
+
       </div>
     </div>
   );
