@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import {
   FaFacebookF,
@@ -23,10 +24,10 @@ function Footer_User() {
         <div>
           <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
           <ul className="space-y-1 text-sm text-gray-300">
-            <li><a href="#" className="hover:text-white">Home</a></li>
-            <li><a href="#" className="hover:text-white">Shop</a></li>
-            <li><a href="#" className="hover:text-white">Cart</a></li>
-            <li><a href="#" className="hover:text-white">Contact</a></li>
+            <li><Link href="#" className="hover:text-white">Become a Partner</Link></li>
+            <li><Link href="#" className="hover:text-white">Shop</Link></li>
+            <li><Link href="#" className="hover:text-white">Cart</Link></li>
+            <li><Link href="#" className="hover:text-white">Contact</Link></li>
           </ul>
         </div>
 
