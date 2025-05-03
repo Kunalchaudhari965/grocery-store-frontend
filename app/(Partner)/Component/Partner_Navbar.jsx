@@ -18,8 +18,10 @@ function Partner_Navbar() {
   return (
     <nav className="bg-green-700 text-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Logo */}
-        <div className="text-2xl font-bold">Partner Panel</div>
+      {/* Logo */}
+      <div className="text-2xl font-bold tracking-wide">
+            <a href="/">Grocery<span className="text-yellow-300">Hub</span></a> Partner
+          </div>
 
         {/* Desktop Links */}
         <ul className="hidden md:flex space-x-6 font-medium">
