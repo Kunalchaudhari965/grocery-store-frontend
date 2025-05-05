@@ -6,10 +6,10 @@ function Partner_Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Dashboard", href: "/partner/dashboard" },
-    { name: "Products", href: "/partner/products" },
+    { name: "Dashboard", href: "/Partner/Dashboard" },
+    { name: "Products", href: "/Partner/Products" },
     { name: "Orders", href: "/partner/orders" },
-    { name: "Earnings", href: "/partner/earnings" },
+    { name: "Earnings", href: "/Partner/Earnings" },
     { name: "Analytics", href: "/partner/analytics" },
     { name: "Store Profile", href: "/partner/store-profile" },
     { name: "Logout", href: "/logout" },

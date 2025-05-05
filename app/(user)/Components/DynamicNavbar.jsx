@@ -5,7 +5,7 @@ import Navbar_User from "./Navbar_User";
 
 function DynamicNavbar() {
     const pathname = usePathname();
-    const ispartnerpath = pathname.startsWith("/partner")
+    const ispartnerpath = pathname.startsWith("/Partner")
     return (
         <div>
             {ispartnerpath ? <Partner_Navbar /> : <Navbar_User />}
