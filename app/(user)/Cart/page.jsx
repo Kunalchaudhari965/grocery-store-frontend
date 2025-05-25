@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const page = () => {
@@ -132,9 +133,9 @@ const page = () => {
             </button>
           </div>
 
-          <button className="w-full mt-4 bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+          <Link href={"/Checkout"} ><button className="w-full mt-4 bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
             Proceed to Checkout
-          </button>
+          </button></Link>
         </div>
       </div>
     </div>

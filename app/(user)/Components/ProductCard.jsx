@@ -21,7 +21,9 @@ const ProductCard = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/products/getall");
+        const response = await axios.get(
+          "http://localhost:8080/products/getall"
+        );
         setProducts(response.data);
       } catch (err) {
         console.error("Failed to fetch products:", err);
@@ -78,8 +80,17 @@ const ProductCard = () => {
               <h3 className="text-lg font-semibold text-gray-800 line-clamp-1">
                 {product.name}
               </h3>
+
+              <p className="text-gray-700">
+                 {product.description}
+                 
+              </p>
+
               <p className="text-green-600 font-bold mt-1">
-                ${parseFloat(product.price).toFixed(2)}
+                {new Intl.NumberFormat("en-IN", {
+                  style: "currency",
+                  currency: "INR",
+                }).format(product.price)}
               </p>
 
               <div className="flex items-center mt-2 text-yellow-400">
